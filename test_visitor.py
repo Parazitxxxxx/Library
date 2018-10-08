@@ -4,10 +4,12 @@ visitor = visitor.Visitor()
 
 
 def test_return_visitor():
+    """Check return data. If I call create_visitor(1234, "vasil' .....)
 
-    # Check return data. If I call create_visitor(1234, "vasil' .....)
-    # Then class return expected by me data.
+    Then class return expected by me data.
+    """
 
+    # Create test visitor
     visitor.create_visitor(123456, "Vasiliy", "parazit@gmail.com")
     name = visitor.get_name()
     email = visitor.get_email()
@@ -15,6 +17,7 @@ def test_return_visitor():
     visitor.add_book_id(1234, 5678, 9101112, 7889)
     used_book_id = visitor.get_used_books_id()
 
+    # Check return data
     assert name == "Vasiliy"
     assert email == "parazit@gmail.com"
     assert visitor_id == 123456
